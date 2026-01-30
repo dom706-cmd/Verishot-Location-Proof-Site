@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dom706-cmd.github.io/Verishot-Location-Proof-Site/sitemap.xml
