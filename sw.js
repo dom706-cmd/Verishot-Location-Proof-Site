@@ -1,4 +1,4 @@
-const CACHE = 'verishot-v4';
+const CACHE = 'verishot-v6';
 const ASSETS = [
   'index.html',
   'verify-workflow.html',
