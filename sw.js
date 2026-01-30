@@ -1,4 +1,4 @@
-const CACHE = 'verishot-v1';
+const CACHE = 'verishot-v3';
 const ASSETS = [
   './',
   'index.html',
@@ -27,7 +27,14 @@ self.addEventListener('activate', (event) => {
 
 self.addEventListener('fetch', (event) => {
   const req = event.request;
-  if(req.method !== 'GET') return;
+  if (req.method !== 'GET') return;
+
+  // Don’t intercept video or range requests (keeps MP4 playback working on GitHub Pages)
+  const url = new URL(req.url);
+  const isRange = req.headers.has('range');
+  const isVideo = req.destination === 'video' || url.pathname.endsWith('.mp4') || url.pathname.endsWith('.mov');
+  if (isRange || isVideo) return;
+
   event.respondWith(
     caches.match(req).then(hit => hit || fetch(req).then(res => {
       const copy = res.clone();

@@ -159,15 +159,16 @@
   <section class="section" id="video">
     <div class="container">
       <h2>Walkthrough</h2>
-      <p class="lead">Drop your app walkthrough here. (For best compatibility, replace <code>walkthrough.mov</code> with an <code>.mp4</code> export.)</p>
+      <p class="lead">Drop your app walkthrough here. (For best compatibility, replace <code>walkthrough.mp4</code> with an <code>.mp4</code> export.)</p>
 
       <div class="video">
         <div class="bar">
           <b>VeriShot walkthrough video</b>
           <span>Replace file in <code>/assets/video/</code></span>
         </div>
-        <video controls playsinline preload="none" poster="assets/img/video-poster.jpg" data-lazy data-src="assets/video/walkthrough.mov">
-          Sorry—your browser can’t play this video. You can <a href="assets/video/walkthrough.mov">download it here</a>.
+        <video class="walkthrough-video" controls playsinline preload="metadata" poster="assets/img/video-poster.jpg">
+          <source src="assets/video/walkthrough.mp4" type="video/mp4">
+          Sorry—your browser can’t play this video. You can <a href="assets/video/walkthrough.mp4">download it here</a>.
         </video>
       </div>
     </div>
