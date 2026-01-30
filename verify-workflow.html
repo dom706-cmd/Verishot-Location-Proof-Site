@@ -1,153 +1,104 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#007AFF">
-<link rel="icon" href="favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
-<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
-<link rel="manifest" href="manifest.webmanifest">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>VeriShot Verification Workflow — Proof ID + GPS + Timestamp</title>
+<meta name="description" content="Learn how VeriShot creates a verified proof image with Proof ID, GPS coordinates, timestamp, and verified status—then lets you search, map, and share." />
+<link rel="canonical" href="https://dom706-cmd.github.io/Verishot-Location-Proof-Site/verify-workflow.html" />
+<link rel="manifest" href="manifest.webmanifest" />
+<meta name="theme-color" content="#0B66FF" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="VeriShot Verification Workflow — Proof ID + GPS + Timestamp" />
+<meta property="og:description" content="Learn how VeriShot creates a verified proof image with Proof ID, GPS coordinates, timestamp, and verified status—then lets you search, map, and share." />
+<meta property="og:url" content="https://dom706-cmd.github.io/Verishot-Location-Proof-Site/verify-workflow.html" />
+<meta property="og:image" content="https://dom706-cmd.github.io/Verishot-Location-Proof-Site/assets/img/app-icon.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="icon" type="image/png" href="assets/img/app-icon.png" />
+<link rel="preload" href="assets/css/styles.css" as="style" />
+<link rel="stylesheet" href="assets/css/styles.css" />
 
-<title>How VeriShot Verification Works – Proof ID, Timestamp & GPS</title>
-<meta name="description" content="See exactly how VeriShot creates a verified proof photo with timestamp, GPS coordinates, and a Proof ID—then stores, searches, maps, and shares it.">
-<link rel="canonical" href="https://dom706-cmd.github.io/Verishot-Location-Proof-Site/verify-workflow.html">
 
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="VeriShot Location Proof">
-<meta property="og:title" content="How VeriShot Verification Works – Proof ID, Timestamp & GPS">
-<meta property="og:description" content="See exactly how VeriShot creates a verified proof photo with timestamp, GPS coordinates, and a Proof ID—then stores, searches, maps, and shares it.">
-<meta property="og:url" content="https://dom706-cmd.github.io/Verishot-Location-Proof-Site/verify-workflow.html">
-<meta property="og:image" content="https://dom706-cmd.github.io/Verishot-Location-Proof-Site/assets/img/LaunchIcon.webp">
-
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="How VeriShot Verification Works – Proof ID, Timestamp & GPS">
-<meta name="twitter:description" content="See exactly how VeriShot creates a verified proof photo with timestamp, GPS coordinates, and a Proof ID—then stores, searches, maps, and shares it.">
-<meta name="twitter:image" content="https://dom706-cmd.github.io/Verishot-Location-Proof-Site/assets/img/LaunchIcon.webp">
-
-<link rel="preload" href="assets/css/styles.css" as="style">
-<link rel="stylesheet" href="assets/css/styles.css">
-<script defer src="assets/js/main.js"></script>
 </head>
 <body>
-<a class="skip" href="#main">Skip to content</a>
-<header>
-  <div class="container nav">
-    <a class="brand" href="index.html">
-      <img src="assets/img/LaunchIcon.webp" width="40" height="40" alt="VeriShot app icon">
-      <span>VeriShot</span>
+<header class="header">
+  <div class="container header__inner">
+    <a class="brand" href="index.html" aria-label="VeriShot home">
+      <img src="assets/img/logo.png" alt="VeriShot" class="brand__logo" />
     </a>
-    <nav class="navlinks" aria-label="Primary">
-      <a href="verify-workflow.html" aria-current="page">How it works</a>
+
+    <nav class="nav" aria-label="Primary">
+      <a href="verify-workflow.html">Workflow</a>
       <a href="pricing.html">Pricing</a>
       <a href="faq.html">FAQ</a>
       <a href="support.html">Support</a>
+      <a class="btn btn--primary" href="{appstore_url}" target="_blank" rel="noopener">Download on the App Store</a>
     </nav>
-    <div class="navcta">
-      <a class="btn primary small" href="https://apps.apple.com/us/app/verishot-location-proof/id6757660668" rel="noopener">Get the iOS App</a>
-    </div>
+
+    <button class="nav__toggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </header>
-<main id="main">
-  <section class="page-hero">
-    <div class="container">
-      <span class="tag">✅ Verification workflow</span>
-      <h1>How VeriShot creates a Verified Proof</h1>
-      <p>See exactly how VeriShot creates a verified proof photo with timestamp, GPS coordinates, and a Proof ID—then stores, searches, maps, and shares it.</p>
-    </div>
-  </section>
 
-  <section class="container prose">
-    <h2>What’s inside a proof?</h2>
-    <p>Every VeriShot proof is an image that includes a readable overlay with the key facts a client needs:</p>
+<main>
+
+<section class="page">
+  <div class="container prose">
+    <h1>Verification workflow</h1>
+    <p>VeriShot’s flow is built to create a consistent, message-ready proof image — fast.</p>
+
+    <h2>1) Capture</h2>
+    <p>Open the camera and take a photo. VeriShot records time + GPS and prepares a verified proof record.</p>
+
+    <h2>2) Save as Proof</h2>
+    <p>Tap <strong>Save as Proof</strong> to generate a stamped image that includes:</p>
     <ul>
-      <li><b>Proof ID</b> — a short identifier to reference the verification</li>
-      <li><b>Timestamp</b> — the time the proof was captured</li>
-      <li><b>GPS coordinates</b> — latitude and longitude</li>
-      <li><b>Status</b> — Verified / Unverified (shown clearly in the stamp)</li>
+      <li>Timestamp</li>
+      <li>GPS coordinates</li>
+      <li>Unique Proof ID</li>
+      <li>Verified status stamp</li>
     </ul>
 
-    <h2>The 5-step workflow</h2>
-    <ol>
-      <li><b>Open Camera</b> and confirm <i>Location Active</i>.</li>
-      <li><b>Take Photo</b> — capture the scene in one tap.</li>
-      <li><b>Save as Proof</b> — VeriShot generates a Proof ID and stamps the image.</li>
-      <li><b>Browse or Search</b> in the Proof Gallery (by ID or date).</li>
-      <li><b>Share</b> the message‑ready proof to clients, teams, or your own records.</li>
-    </ol>
+    <h2>3) Find it later (Gallery + Search)</h2>
+    <p>Search proofs by ID or date so you can retrieve documentation quickly.</p>
 
-    <div class="grid2" style="margin-top:18px">
-      <figure class="shot-card" style="margin:0">
-        <picture>
-          <source srcset="assets/img/2.webp" type="image/webp">
-          <img src="assets/img/2.webp" alt="Watermarked proof photo screenshot" loading="lazy">
-        </picture>
-        <figcaption><b style="color:var(--text)">Watermarked Proof Photo</b><br>Includes time, location & Verified stamp.</figcaption>
-      </figure>
+    <h2>4) View on a map</h2>
+    <p>Every verification is pinned by location for at-a-glance auditing and discovery.</p>
 
-      <figure class="shot-card" style="margin:0">
-        <picture>
-          <source srcset="assets/img/5.webp" type="image/webp">
-          <img src="assets/img/5.webp" alt="Proof gallery and search screenshot" loading="lazy">
-        </picture>
-        <figcaption><b style="color:var(--text)">Proof Gallery & Search</b><br>Find proofs by ID or date, fast.</figcaption>
-      </figure>
-    </div>
+    <h2>5) Share anywhere</h2>
+    <p>Send the stamped proof image through Messages, email, AirDrop, and more.</p>
 
-    <h2>Map view</h2>
-    <p>VeriShot can show proofs pinned by location so you can quickly validate job sites, routes, and field activity.</p>
-    <figure class="shot-card" style="margin:0">
-      <picture>
-        <source srcset="assets/img/6.webp" type="image/webp">
-        <img src="assets/img/6.webp" alt="Proofs on a map screenshot" loading="lazy">
-      </picture>
-      <figcaption><b style="color:var(--text)">Proofs on a Map</b><br>Every verification pinned by location.</figcaption>
-    </figure>
+    <div class="shot" style="margin-top:18px"><img src="assets/img/s8.webp" alt="Message-ready proof sent in iMessage" loading="lazy"></div>
+  </div>
+</section>
 
-    <h2>Sharing</h2>
-    <p>When you share a proof, recipients can immediately see the stamped facts (ID, time, location). You can share via Messages, Mail, AirDrop, or any supported iOS share target.</p>
-    <figure class="shot-card" style="margin:0">
-      <picture>
-        <source srcset="assets/img/7.webp" type="image/webp">
-        <img src="assets/img/7.webp" alt="Share sheet screenshot" loading="lazy">
-      </picture>
-      <figcaption><b style="color:var(--text)">Share Proof Anywhere</b><br>Send the stamped image to clients and teams.</figcaption>
-    </figure>
-
-    <h2>Notes on accuracy</h2>
-    <p>GPS coordinates come from your device’s location services. For best results, capture proofs with a strong GPS signal. Always review the stamp before sending if your workflow requires strict precision.</p>
-
-    <div style="margin-top:18px">
-      <a class="btn primary" href="https://apps.apple.com/us/app/verishot-location-proof/id6757660668" rel="noopener">Get VeriShot on the App Store</a>
-      <a class="btn" href="faq.html">Read FAQ →</a>
-    </div>
-  </section>
 </main>
-<footer>
-  <div class="container footer-grid">
-    <div>
-      <a class="brand" href="index.html" style="text-decoration:none;">
-        <img src="assets/img/LaunchIcon.webp" width="40" height="40" alt="">
-        <span>VeriShot Location Proof</span>
-      </a>
-      <p style="margin-top:10px;">Verified photo proof—stamped with timestamp + GPS coordinates and ready to share.</p>
-      <p class="mini">iPhone & iPad (iOS 16+). iMac version coming soon.</p>
+<footer class="footer">
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <img src="assets/img/app-icon.png" alt="VeriShot app icon" class="footer__icon" />
+      <div>
+        <div class="footer__name">VeriShot Location Proof</div>
+        <div class="footer__tag">Verified photo proof with timestamp + GPS coordinates.</div>
+      </div>
     </div>
-    <div class="footer-links" aria-label="Product">
-      <b style="color:var(--text);">Product</b>
-      <a href="verify-workflow.html">How verification works</a>
-      <a href="pricing.html">Plans & limits</a>
-      <a href="faq.html">FAQ</a>
-    </div>
-    <div class="footer-links" aria-label="Company">
-      <b style="color:var(--text);">Company</b>
-      <a href="support.html">Support</a>
+
+    <div class="footer__links">
       <a href="privacy.html">Privacy</a>
       <a href="terms.html">Terms</a>
+      <a href="support.html">Contact</a>
+      <a href="https://apps.apple.com/us/app/verishot-location-proof/id6757660668" target="_blank" rel="noopener">App Store</a>
+    </div>
+
+    <div class="footer__small">
+      <span>© 2026 VeriShot.</span>
+      <span class="dot">•</span>
+      <span>iPhone + iPad (iOS 16+). iMac coming soon.</span>
     </div>
   </div>
-  <div class="container mini">© <span data-year></span> VeriShot. Apple, the Apple logo, iPhone, iPad and Mac are trademarks of Apple Inc.</div>
 </footer>
-</body>
+<script src="assets/js/site.js" defer></script>
 
+</body>
 </html>
